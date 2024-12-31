@@ -1,5 +1,5 @@
 # How to get the tap co-ordinates of the grid cell in .NET MAUI Datagrid (SfDataGrid) ?
-In this article, we will show you how to get the tap co-ordinates of the grid cell in [.Net Maui DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid).
+In this article, we will show you how to get the tap position of the grid cell in [.NET MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid).
 
 ## xaml
 
@@ -32,18 +32,18 @@ In this article, we will show you how to get the tap co-ordinates of the grid ce
 ``` 
 
 ## C#
-The code below demonstrates how to get the tap co-ordinates of the grid cell in Cell Tapped event.
+The following code demonstrates how to get the tap position of the grid cell using `CellTapped` event.
 ```
 private void dataGrid_CellTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs e)
 {
     Point point = dataGrid.RowColumnIndexToPoint(e.RowColumnIndex);
-    double xCoordinate = point.X;
-    double yCoordinate = point.Y;
-    DisplayAlert("Co Ordinates", $"XCoOrdinate : {xCoordinate} YCoOrdinate : {yCoordinate}","Ok");
+    double xPosition= point.X;
+    double yPosition = point.Y;
+    DisplayAlert("Tap Position", $"XPosition: {xPosition} YPosition: {yPosition }","Ok");
 }
 ```
 
-![CoOrdinates.gif](https://support.syncfusion.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzI3Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.uQ8O9myvQEbHIKSowJegkBTx-maZhNAALwrVUtyv9gU)
+ ![TapPosition.gif](https://support.syncfusion.com/kb/agent/attachment/article/18656/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0NDg3Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.XodLR7vY5bNfmDumA8u_dSAZ63Ut-QRuAJmFdNEWik8)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/How-to-get-the-tap-co-ordinates-of-the-grid-cell-in-.NET-MAUI-Datagrid-SfDataGrid--in-DataGrid-)
 

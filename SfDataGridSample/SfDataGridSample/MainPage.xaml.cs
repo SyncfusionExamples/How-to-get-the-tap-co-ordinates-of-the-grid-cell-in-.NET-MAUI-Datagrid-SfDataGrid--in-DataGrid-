@@ -10,9 +10,9 @@
         private void dataGrid_CellTapped(object sender, Syncfusion.Maui.DataGrid.DataGridCellTappedEventArgs e)
         {
             Point point = dataGrid.RowColumnIndexToPoint(e.RowColumnIndex);
-            double xCoordinate = point.X;
-            double yCoordinate = point.Y;
-            DisplayAlert("Co Ordinates", $"XCoOrdinate : {xCoordinate} YCoOrdinate : {yCoordinate}","Ok");
+            double xPosition = point.X;
+            double yPosition = point.Y;
+            DisplayAlert("Tap Position", $"XPosition: {xPosition} YPosition: {yPosition}", "Ok");
         }
     }
 }
